@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "70b3e77c-60b3-4fe5-b651-c26205e9cac4",
+		"name": "Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24192122"
+	},
+	"item": [
+		{
+			"name": "GET_Books",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Books",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_CoverPhotos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; v=1.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":0,\"idBook\":0,\"url\":\"string\"}"
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"CoverPhotos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_CoverPhotos_books_covers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/books/covers/1",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"CoverPhotos",
+						"books",
+						"covers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_CoverPhotos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/2",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"CoverPhotos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_CoverPhotos",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; v=1.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":5,\"idBook\":6,\"url\":\"string\"}"
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"CoverPhotos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_CoverPhotos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"CoverPhotos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
