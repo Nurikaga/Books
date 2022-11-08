@@ -8,6 +8,28 @@
 	"item": [
 		{
 			"name": "GET_Books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var responseData = pm.response.json();\r",
+							"console.log(responseData[0]);\r",
+							"\r",
+							"pm.test(\"title\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Book 1\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -35,6 +57,23 @@
 		},
 		{
 			"name": "POST_CoverPhotos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"url\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -70,6 +109,23 @@
 		},
 		{
 			"name": "GET_CoverPhotos_books_covers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"urlg\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 1&w=250&h=350\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -100,6 +156,33 @@
 		},
 		{
 			"name": "GET_CoverPhotos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"idBook\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.idBook).to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"url\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 2&w=250&h=350\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -128,6 +211,33 @@
 		},
 		{
 			"name": "PUT_CoverPhotos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(5);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"idBook\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.idBook).to.eql(6);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"url\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -164,6 +274,19 @@
 		},
 		{
 			"name": "DELETE_CoverPhotos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [
